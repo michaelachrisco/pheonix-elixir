@@ -19,6 +19,12 @@ defmodule HelloPhoenix.Router do
     get "/", PageController, :index
   end
 
+  scope "/api", HelloPhoenix do
+    pipe_through :api
+
+    resources "/contacts", ContactController
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", HelloPhoenix do
   #   pipe_through :api

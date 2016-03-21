@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :hello_phoenix, HelloPhoenix.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "testuser",
+  password: "",
   database: "hello_phoenix_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
