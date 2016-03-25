@@ -13,11 +13,19 @@ defmodule HelloPhoenix.Router do
     plug :accepts, ["json"]
   end
 
+  # scope "/", HelloPhoenix do
+  #   pipe_through :browser # Use the default browser stack
+  #
+  #   get "/", PageController, :index
+  #   resources "/users", UserController
+  # end
   scope "/", HelloPhoenix do
-    pipe_through :browser # Use the default browser stack
+  pipe_through :browser # Use the default browser stack
+  get "/registration", RegistrationController, :new
+  post "/registration", RegistrationController, :create
 
-    get "/", PageController, :index
-  end
+  get "/pages", PageController, :index
+end
 
   # Other scopes may use custom stacks.
   # scope "/api", HelloPhoenix do

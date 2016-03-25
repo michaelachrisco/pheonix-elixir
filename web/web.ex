@@ -36,6 +36,7 @@ defmodule HelloPhoenix.Web do
 
       import HelloPhoenix.Router.Helpers
       import HelloPhoenix.Gettext
+      alias HelloPhoenix.User
     end
   end
 
